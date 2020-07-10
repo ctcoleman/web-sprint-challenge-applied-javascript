@@ -28,7 +28,7 @@ function Header() {
   headerWrapper.appendChild(date)
   headerWrapper.appendChild(heading)
   headerWrapper.appendChild(temp)
-
+  
   console.log(headerWrapper)
   return headerWrapper
 }

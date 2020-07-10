@@ -42,7 +42,7 @@ function cardCreator({ headline, authorPhoto, authorName }) {
   author.appendChild(imageContainer)
   imageContainer.appendChild(image)
   author.appendChild(name)
-
+  
   console.log(cardWrapper)
   return cardWrapper
 }
@@ -52,13 +52,13 @@ const articlesURL = 'https://lambda-times-backend.herokuapp.com/articles'
 axios.get(articlesURL)
   .then((value) => {
     const articles = value.data.articles
-    const cardContainer = document.querySelector('.cards-container')
-
+    
     for (let topics in articles) {
-      articles[topics].forEach((item) => {
-        cardContainer.appendChild(cardCreator(item))
-      })
+      aricles[topics].forEach(
+      cardCreator(articles[topics])
+      
     }
+    const cardContainer = document.querySelector('.cards-container')
 
     function createCard(type) {
       type.forEach((item) => {
