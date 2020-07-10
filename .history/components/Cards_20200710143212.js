@@ -27,7 +27,6 @@ function cardCreator({ headline, authorPhoto, authorName }) {
   cardWrapper.className = 'card'
   const heading = document.createElement('div')
   heading.textContent = `${headline}`
-  heading.classList.add('headline')
   const author = document.createElement('div')
   author.className = 'author'
   const imageContainer = document.createElement('div')
@@ -55,9 +54,7 @@ axios.get(articlesURL)
     const javascript = articles.javascript
     const jquery = articles.jquery
     const node = articles.node
-    const technology = articles.technology
-
-    const cardContainer = document.querySelector('.cards-container')
+    const technology = articles.techonology
 
     function createCard(type) {
       type.forEach((item) => {
@@ -65,19 +62,8 @@ axios.get(articlesURL)
       })
     }
 
-    createCard(bootstrap)
-    createCard(javascript)
-    createCard(jquery)
-    createCard(node)
-    createCard(technology)
-
-    const card = document.querySelectorAll('.card')
-    card.forEach((card) => {
-      const heading = card.querySelector('.headline')
-      card.addEventListener('click', () => {
-        console.log(heading.textContent)
-      })
-    })
+    const cardContainer = document.querySelector('.cards-container')
+    cardContainer.appendChild(cardCreator(bootstrap))
   })
   .catch((e) => {
     console.log(e)

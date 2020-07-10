@@ -27,7 +27,6 @@ function cardCreator({ headline, authorPhoto, authorName }) {
   cardWrapper.className = 'card'
   const heading = document.createElement('div')
   heading.textContent = `${headline}`
-  heading.classList.add('headline')
   const author = document.createElement('div')
   author.className = 'author'
   const imageContainer = document.createElement('div')
@@ -51,11 +50,12 @@ const articlesURL = 'https://lambda-times-backend.herokuapp.com/articles'
 axios.get(articlesURL)
   .then((value) => {
     const articles = value.data.articles
+    console.log(article)
     const bootstrap = articles.bootstrap
     const javascript = articles.javascript
     const jquery = articles.jquery
     const node = articles.node
-    const technology = articles.technology
+    const technology = articles.techonology
 
     const cardContainer = document.querySelector('.cards-container')
 
@@ -70,15 +70,14 @@ axios.get(articlesURL)
     createCard(jquery)
     createCard(node)
     createCard(technology)
-
-    const card = document.querySelectorAll('.card')
-    card.forEach((card) => {
-      const heading = card.querySelector('.headline')
-      card.addEventListener('click', () => {
-        console.log(heading.textContent)
-      })
-    })
+    
   })
   .catch((e) => {
     console.log(e)
   })
+  
+  const card = document.querySelector('.card')
+  console.log(card)
+  // card.addEventListener('click', (card) => {
+  //   console.log(card)
+  // })

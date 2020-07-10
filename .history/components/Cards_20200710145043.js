@@ -27,7 +27,7 @@ function cardCreator({ headline, authorPhoto, authorName }) {
   cardWrapper.className = 'card'
   const heading = document.createElement('div')
   heading.textContent = `${headline}`
-  heading.classList.add('headline')
+  heading.classList.add('')
   const author = document.createElement('div')
   author.className = 'author'
   const imageContainer = document.createElement('div')
@@ -70,15 +70,13 @@ axios.get(articlesURL)
     createCard(jquery)
     createCard(node)
     createCard(technology)
-
-    const card = document.querySelectorAll('.card')
-    card.forEach((card) => {
-      const heading = card.querySelector('.headline')
-      card.addEventListener('click', () => {
-        console.log(heading.textContent)
+    
+    const card = document.querySelector('.card')
+    card.addEventListener('click', (iten) => {
+        console.log(card)
       })
-    })
   })
   .catch((e) => {
     console.log(e)
   })
+  

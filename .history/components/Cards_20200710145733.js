@@ -57,28 +57,29 @@ axios.get(articlesURL)
     const node = articles.node
     const technology = articles.technology
 
-    const cardContainer = document.querySelector('.cards-container')
-
+    
     function createCard(type) {
       type.forEach((item) => {
         cardContainer.appendChild(cardCreator(item))
       })
     }
-
+    
     createCard(bootstrap)
     createCard(javascript)
     createCard(jquery)
     createCard(node)
     createCard(technology)
-
-    const card = document.querySelectorAll('.card')
-    card.forEach((card) => {
-      const heading = card.querySelector('.headline')
-      card.addEventListener('click', () => {
-        console.log(heading.textContent)
-      })
-    })
+    
   })
   .catch((e) => {
     console.log(e)
   })
+  
+  const cardContainer = document.querySelector('.cards-container')
+  console.log(document)
+  const card = document.querySelector('card')
+  console.log(card)
+  const heading = document.querySelector('.headline')
+  card.addEventListener('click', () => {
+      console.log(heading.textContent)
+    })

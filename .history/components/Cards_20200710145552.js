@@ -70,15 +70,16 @@ axios.get(articlesURL)
     createCard(jquery)
     createCard(node)
     createCard(technology)
-
-    const card = document.querySelectorAll('.card')
-    card.forEach((card) => {
-      const heading = card.querySelector('.headline')
-      card.addEventListener('click', () => {
-        console.log(heading.textContent)
-      })
-    })
+    
   })
   .catch((e) => {
     console.log(e)
   })
+  
+  console.log(document)
+  const card = document.('card')
+  console.log(card)
+  const heading = document.querySelector('.headline')
+  // card.addEventListener('click', () => {
+  //     console.log(heading.textContent)
+  //   })

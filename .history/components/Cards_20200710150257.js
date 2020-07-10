@@ -58,19 +58,19 @@ axios.get(articlesURL)
     const technology = articles.technology
 
     const cardContainer = document.querySelector('.cards-container')
-
+    
     function createCard(type) {
       type.forEach((item) => {
         cardContainer.appendChild(cardCreator(item))
       })
     }
-
+    
     createCard(bootstrap)
     createCard(javascript)
     createCard(jquery)
     createCard(node)
     createCard(technology)
-
+    
     const card = document.querySelectorAll('.card')
     card.forEach((card) => {
       const heading = card.querySelector('.headline')
@@ -82,3 +82,4 @@ axios.get(articlesURL)
   .catch((e) => {
     console.log(e)
   })
+  
