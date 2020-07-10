@@ -15,21 +15,5 @@ function Header() {
   const headerWrapper = document.createElement('div')
   headerWrapper.classList.add('header')
 
-  const date = document.createElement('span')
-  date.classList.add('date')
-  date.textContent = 'MARCH 28, 2020'
-
-  const heading = document.createElement('h1')
-  heading.textContent = 'Lambda Times'
-
-  const temp = document.createElement('span')
-  temp.textContent = `98°`
-
-  headerWrapper.appendChild(date)
-  headerWrapper.appendChild(heading)
-  headerWrapper.appendChild(temp)
-
-  console.log(headerWrapper)
+  const 
 }
-
-Header()

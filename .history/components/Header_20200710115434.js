@@ -24,11 +24,11 @@ function Header() {
 
   const temp = document.createElement('span')
   temp.textContent = `98°`
-
+ 
   headerWrapper.appendChild(date)
   headerWrapper.appendChild(heading)
   headerWrapper.appendChild(temp)
-
+  
   console.log(headerWrapper)
 }
 
