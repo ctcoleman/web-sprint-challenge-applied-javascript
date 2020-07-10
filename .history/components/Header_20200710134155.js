@@ -29,7 +29,7 @@ function Header() {
   headerWrapper.appendChild(heading)
   headerWrapper.appendChild(temp)
   
-  return headerWrapper
+  return 
 }
 
 const headerContainer = document.querySelector('.header-container')

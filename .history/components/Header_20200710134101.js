@@ -28,8 +28,8 @@ function Header() {
   headerWrapper.appendChild(date)
   headerWrapper.appendChild(heading)
   headerWrapper.appendChild(temp)
-  
-  return headerWrapper
+
+  console.log(headerWrapper)
 }
 
 const headerContainer = document.querySelector('.header-container')

@@ -15,6 +15,7 @@ function tabMaker (topic) {
   const tab = document.createElement('div')
 
   tab.classList.add('tab')
+
   tab.textContent = `${topic}`
   
   return tab
@@ -24,6 +25,7 @@ const topicsURL = 'https://lambda-times-backend.herokuapp.com/topics'
 axios.get(topicsURL)
   .then((value) => {
     let topics = value.data.topics
+    console.log('poop')
     topics.forEach((topic) => {
       const createdTab = tabMaker(topic)
       topicsDiv.appendChild(createdTab)

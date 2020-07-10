@@ -50,7 +50,7 @@ axios.get(articlesURL)
   .then((value) => {
     const articles = value.data.articles
     console.log(articles)
-    
+    jc
   })
   .catch((e) => {
     console.log(e)

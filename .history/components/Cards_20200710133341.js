@@ -22,7 +22,7 @@
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 
 
-function cardCreator({ headline, authorPhoto, authorName }) {
+function cardCreator(headline, authorPhoto, authorName }) {
   const cardWrapper = document.createElement('div')
   cardWrapper.className = 'card'
   const heading = document.createElement('div')
@@ -48,10 +48,6 @@ const articlesURL = 'https://lambda-times-backend.herokuapp.com/articles'
 
 axios.get(articlesURL)
   .then((value) => {
-    const articles = value.data.articles
-    console.log(articles)
-    
-  })
-  .catch((e) => {
-    console.log(e)
+    console.log(value)
+    console.log(cardCreator(value.data.articles.bootstrap[0]))
   })

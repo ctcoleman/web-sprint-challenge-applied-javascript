@@ -50,7 +50,13 @@ axios.get(articlesURL)
   .then((value) => {
     const articles = value.data.articles
     console.log(articles)
-    
+    for (let topic in articles) {
+      if (articles.hasOwnProperty(topic)) {
+        
+      }
+    }
+
+    })
   })
   .catch((e) => {
     console.log(e)

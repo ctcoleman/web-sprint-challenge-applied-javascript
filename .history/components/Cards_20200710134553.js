@@ -51,6 +51,8 @@ axios.get(articlesURL)
     const articles = value.data.articles
     console.log(articles)
     
+
+    })
   })
   .catch((e) => {
     console.log(e)

@@ -16,7 +16,6 @@ function tabMaker (topic) {
 
   tab.classList.add('tab')
   tab.textContent = `${topic}`
-  
   return tab
 }
 const topicsURL = 'https://lambda-times-backend.herokuapp.com/topics'

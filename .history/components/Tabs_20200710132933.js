@@ -15,7 +15,9 @@ function tabMaker (topic) {
   const tab = document.createElement('div')
 
   tab.classList.add('tab')
+
   tab.textContent = `${topic}`
+  console.log('poop')
   
   return tab
 }

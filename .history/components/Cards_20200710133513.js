@@ -48,9 +48,9 @@ const articlesURL = 'https://lambda-times-backend.herokuapp.com/articles'
 
 axios.get(articlesURL)
   .then((value) => {
-    const articles = value.data.articles
-    console.log(articles)
-    
+    console.log(value)
+    let card = cardCreator(value.data.articles.bootstrap[0])
+    console.log(card)
   })
   .catch((e) => {
     console.log(e)
